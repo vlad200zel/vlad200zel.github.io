@@ -498,6 +498,18 @@ var CONTACTS = {
 (function(){
   "use strict";
 
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (!location.hash){
+    var de = document.documentElement;
+    de.style.scrollBehavior = 'auto';
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function(){
+      window.scrollTo(0, 0);
+      de.style.scrollBehavior = '';
+    });
+    window.addEventListener('pageshow', function(){ window.scrollTo(0, 0); });
+  }
+
   document.querySelectorAll('[data-name]').forEach(function(el){
     el.textContent = CONTACTS.name.toUpperCase();
   });
