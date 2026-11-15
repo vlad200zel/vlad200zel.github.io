@@ -203,6 +203,16 @@
   .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-family:'JetBrains Mono';font-size:10.5px;
     letter-spacing:.14em;text-transform:uppercase;color:#5d655f}
 
+  .note{margin-top:44px;max-width:820px;padding:26px 30px;border:1px solid var(--line);border-radius:18px;
+    background:rgba(255,255,255,.02)}
+  .note-h{color:var(--lime);margin-bottom:16px}
+  .note-list{list-style:none;display:grid;gap:11px}
+  .note-list li{position:relative;padding-left:16px;font-size:13.5px;line-height:1.75;color:#9aa39c}
+  .note-list li:before{content:'';position:absolute;left:0;top:10px;width:5px;height:5px;border-radius:50%;background:rgba(200,255,46,.5)}
+  .note-list b{color:#dfe5e0;font-weight:500}
+  .note-foot{margin-top:16px;font-size:12.5px;color:#6f786f}
+  @media(max-width:700px){.note{margin-top:30px;padding:22px 20px;border-radius:16px}.note-list li{font-size:13px}}
+
   .rv{opacity:0;transform:translateY(30px);filter:blur(6px);
     transition:opacity 1.15s var(--ease),transform 1.15s var(--ease),filter 1.15s var(--ease)}
   .rv.in{opacity:1;transform:none;filter:blur(0)}
@@ -448,6 +458,16 @@
         <h3>С учётом помещения</h3>
         <p>Размер зала, отражения, покрытие звуком — настройка делается под конкретную площадку, а не «по памяти».</p>
       </div>
+    </div>
+
+    <div class="note rv">
+      <div class="note-h mono">Дополнительно · по запросу</div>
+      <ul class="note-list">
+        <li><b>Оборудование под ключ</b> — можно заказать технику под мероприятие. Стоимость отдельная, обсуждается лично.</li>
+        <li><b>Консультация по оборудованию</b> — сколько нужно на самом деле, что лишнее и на чём не стоит тратиться.</li>
+        <li><b>Монтаж и демонтаж под ключ</b> — отдельная стоимость; если техники много и она серьёзная, добавляется оплата монтажнику.</li>
+      </ul>
+      <p class="note-foot">Все условия обсуждаемы — точно найдём компромисс.</p>
     </div>
   </div>
 </section>
